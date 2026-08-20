@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#6d1532">
+<meta name="description" content="All Samastipur - हर Event की हर Service एक ही जगह।">
+<title>All Samastipur | Every Event • Every Service</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#fffaf7;color:#222;line-height:1.6}
+a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+:root{--p:#6d1532;--g:#d9a227;--d:#260914;--l:#fff8f2;--m:#777;--s:0 12px 35px #00000018}
+.top{background:var(--d);color:#fff;text-align:center;padding:7px;font-size:13px}.top b{color:#ffd76a}
+header{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 3px 18px #00000014}
+.nav{max-width:1200px;margin:auto;padding:13px 18px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900;color:var(--p)}.logo span{color:var(--g)}.logo small{display:block;font-size:9px;letter-spacing:2px;color:#777}
+nav{display:flex;gap:20px}nav a{font-weight:bold;font-size:14px}.menu{display:none;background:none;border:0;font-size:28px}
+.hero{min-height:650px;color:#fff;display:flex;align-items:center;background:linear-gradient(90deg,#260914eb,#6d1532a0),url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero-in{max-width:1200px;width:100%;margin:auto;padding:75px 20px}.pill{display:inline-block;padding:8px 16px;border:1px solid #ffffff55;background:#ffffff18;border-radius:30px;margin-bottom:20px}
+.hero h1{font-size:clamp(42px,7vw,78px);line-height:1.02;max-width:850px;margin-bottom:22px}.hero h1 span{color:#ffd76a}.hero p{max-width:690px;font-size:18px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;border-radius:11px;padding:14px 22px;cursor:pointer;font-weight:800;display:inline-block}.gold{background:var(--g);color:#fff}.white{background:#fff;color:var(--p)}.dark{background:var(--p);color:#fff}
+.stats{max-width:1100px;margin:-45px auto 0;position:relative;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:20px;box-shadow:var(--s);overflow:hidden}.stat{text-align:center;padding:22px 10px;border-right:1px solid #eee}.stat:last-child{border:0}.stat b{display:block;font-size:28px;color:var(--p)}.stat span{font-size:13px;color:var(--m)}
+section{padding:80px 18px}.container{max-width:1200px;margin:auto}.title{text-align:center;margin-bottom:42px}.title small{color:var(--g);font-weight:900;letter-spacing:1.5px}.title h2{font-size:clamp(30px,5vw,45px);color:var(--p);margin:7px 0}.title p{max-width:700px;margin:auto;color:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--s)}.pic{height:165px;background-size:cover;background-position:center}.body{padding:18px}.body h3{color:var(--p);font-size:19px}.body p{font-size:13px;color:var(--m);margin:5px 0 13px}.link{color:#a87500;font-weight:bold}
+.how{background:var(--l)}.steps,.why{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.step,.whycard{background:#fff;padding:25px 18px;text-align:center;border-radius:18px;box-shadow:var(--s)}.icon{font-size:35px;margin-bottom:8px}.step h3,.whycard h3{color:var(--p);margin-bottom:7px}.step p,.whycard p{font-size:13px;color:var(--m)}
+.whysec{background:var(--p);color:#fff}.whysec .title h2,.whysec .title p{color:#fff}.whycard{background:#ffffff10;border:1px solid #ffffff18;color:#fff}.whycard h3{color:#fff}.whycard p{color:#eee}
+.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.package{background:#fff;border-radius:20px;padding:28px;box-shadow:var(--s);border:1px solid #eee}.package.feature{border:2px solid var(--g)}.package h3{color:var(--p);font-size:23px}.price{font-size:32px;font-weight:900;color:var(--g);margin:10px 0 18px}.package ul{list-style:none;margin-bottom:22px}.package li{margin:8px 0;font-size:14px}
+.booking{background:#f7eee9}.bookwrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}.bookinfo h2{font-size:clamp(34px,5vw,52px);line-height:1.08;color:var(--p);margin:8px 0 18px}.bookinfo p{color:var(--m)}.bookinfo li{margin:12px 0;list-style:none;font-weight:600}.formbox{background:#fff;padding:28px;border-radius:22px;box-shadow:var(--s)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;font-size:13px;font-weight:bold;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #ddd;border-radius:9px;padding:13px;outline:0;background:#fff}.field textarea{min-height:100px}.full{grid-column:1/-1}
+.payment{margin-top:18px;padding:18px;border-radius:15px;background:#fff8e7;border:1px solid #efd58c}.upi{font-weight:900;color:#555;margin:5px 0}.pay{background:#1a73e8;color:#fff;border:0;border-radius:9px;padding:12px 18px;font-weight:bold;cursor:pointer}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery div{height:210px;border-radius:16px;background-size:cover;background-position:center}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review{background:#fff;padding:25px;border-radius:18px;box-shadow:var(--s)}.stars{color:#e3a500;font-size:20px}.review p{color:var(--m);margin:10px 0 14px}
+.faq{max-width:850px;margin:auto}.faqitem{background:#fff;border-radius:12px;margin-bottom:10px;box-shadow:0 5px 20px #00000008;overflow:hidden}.faqq{width:100%;background:#fff;border:0;text-align:left;padding:18px;font-weight:800;cursor:pointer;color:var(--p)}.faqa{display:none;padding:0 18px 18px;color:var(--m);font-size:14px}.faqitem.active .faqa{display:block}
+.partner{background:linear-gradient(135deg,#fff3cf,#fff9ef)}.partnerbox{text-align:center;background:#fff;border-radius:25px;padding:45px 25px;box-shadow:var(--s)}.partnerbox h2{font-size:35px;color:var(--p);margin:8px 0}.partnerbox p{max-width:700px;margin:0 auto 20px;color:var(--m)}
+.contact{background:var(--p);color:#fff}.contact .title h2,.contact .title p{color:#fff}.contactgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contactcard{text-align:center;padding:25px;border-radius:18px;background:#ffffff10}.contactcard .icon{font-size:35px}
+footer{background:#270713;color:#fff;padding:30px 18px;text-align:center}footer h2{color:#ffd76a}footer p{color:#ccc;font-size:13px}
+.float{position:fixed;right:16px;bottom:18px;z-index:20;display:flex;flex-direction:column;gap:9px}.fbtn{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;box-shadow:0 5px 20px #0004;border:0}.wa{background:#25d366}.call{background:var(--p)}.ai{background:#111}
+.chat{display:none;position:fixed;right:18px;bottom:150px;width:320px;max-width:calc(100vw - 36px);z-index:30;background:#fff;border-radius:18px;box-shadow:0 15px 50px #0003;overflow:hidden}.chathead{background:var(--p);color:#fff;padding:14px;font-weight:bold}.chatbody{height:280px;padding:14px;overflow:auto;background:#fafafa}.msg{background:#fff;padding:10px;border-radius:10px;margin-bottom:9px;font-size:13px}.botmsg{border-left:3px solid var(--g)}.chatinput{display:flex;border-top:1px solid #eee}.chatinput input{flex:1;border:0;padding:12px;outline:0}.chatinput button{border:0;background:var(--p);color:#fff;padding:0 15px}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:40;align-items:center;justify-content:center;padding:18px}.modalbox{background:#fff;max-width:450px;width:100%;border-radius:20px;padding:30px;text-align:center}.success{font-size:55px}.modalbox h2{color:var(--p)}
+@media(max-width:950px){nav{display:none}nav.open{display:flex;position:absolute;left:0;right:0;top:65px;background:#fff;padding:20px;flex-direction:column;box-shadow:0 10px 25px #0002}.menu{display:block}.grid{grid-template-columns:repeat(2,1fr)}.steps,.why{grid-template-columns:repeat(2,1fr)}.bookwrap{grid-template-columns:1fr}.packages{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.contactgrid{grid-template-columns:1fr}.stats{margin:20px 15px 0}}
+@media(max-width:600px){.hero{min-height:600px}.hero-in{padding:85px 18px}.hero p{font-size:15px}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #eee}section{padding:60px 14px}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.formbox{padding:20px}.gallery div{height:145px}}
+</style>
+</head>
+<body>
+<div class="top">📍 <b>Samastipur, Bihar</b> | Owner: <b>Rahul</b> | 📞 7494005371</div>
+<header><div class="nav"><a href="#home" class="logo">All <span>Samastipur</span><small>EVERY EVENT • EVERY SERVICE</small></a><button class="menu" onclick="toggleMenu()">☰</button><nav id="nav"><a href="#home">Home</a><a href="#services">Services</a><a href="#packages">Packages</a><a href="#booking">Booking</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav></div></header>
+
+<section class="hero" id="home"><div class="hero-in"><div class="pill">✨ Samastipur's Event Service Platform</div><h1>हर Event की<br><span>हर Service</span> एक जगह</h1><p>शादी, रिसेप्शन, engagement, birthday, party, puja या कोई भी special event — Tent, Catering, Decoration, DJ, Photography, Hall और बहुत कुछ All Samastipur पर।</p><div class="actions"><a href="#booking" class="btn gold">📅 Book Your Event</a><a href="https://wa.me/917494005371" target="_blank" class="btn white">💬 WhatsApp</a><a href="tel:+917494005371" class="btn dark">📞 Call Now</a></div></div></section>
+
+<div class="stats"><div class="stat"><b>10+</b><span>Event Services</span></div><div class="stat"><b>24×7</b><span>Booking Request</span></div><div class="stat"><b>1</b><span>Trusted Platform</span></div><div class="stat"><b>100%</b><span>Local Focus</span></div></div>
+
+<section id="services"><div class="container"><div class="title"><small>OUR SERVICES</small><h2>जो चाहिए, सब मिलेगा</h2><p>अपने पूरे event के लिए अलग-अलग जगह खोजने की जरूरत नहीं।</p></div><div class="grid">
+<div class="card"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80')"></div><div class="body"><h3>🎪 Tent House</h3><p>Wedding और सभी functions के लिए tent setup.</p><a href="#booking" class="link">Book Now →</a></div></div>
+<div class="card"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=800&q=80')"></div><div class="body"><h3>💐 Decoration</h3><p>Stage, wedding, room और venue decoration.</p><a href="#booking" class="link">Book Now →</a></div></div>
+<div class="card"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80')"></div><div class="body"><h3>🍽️ Catering</h3><p>Guest count और budget के हिसाब से catering.</p><a href="#booking" class="link">Book Now →</a></div></div>
+<div class="card"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80')"></div><div class="body"><h3>🎧 DJ & Sound</h3><p>DJ, sound, lights और party setup.</p><a href="#booking" class="link">Book Now →</a></div></div>
+<div class="card"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80')"></div><div class="body"><h3>📸 Photography</h3><p>Photo, video, cinematic और pre-wedding.</p><a href="#booking" class="link">Book Now →</a></div></div>
+<div class="card"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80')"></div><div class="body"><h3>🏨 Wedding Hall</h3><p>Marriage hall और function venue.</p><a href="#booking" class="link">Book Now →</a></div></div>
+<div class="card"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80')"></div><div class="body"><h3>💄 Makeup & Mehndi</h3><p>Bridal makeup, groom makeup और mehndi.</p><a href="#booking" class="link">Book Now →</a></div></div>
+<div class="card"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80')"></div><div class="body"><h3>🚗 Car & Transport</h3><p>Wedding car और guest transportation.</p><a href="#booking" class="link">Book Now →</a></div></div>
+</div></div></section>
+
+<section class="how"><div class="container"><div class="title"><small>HOW IT WORKS</small><h2>Booking कैसे होगी?</h2></div><div class="steps">
+<div class="step"><div class="icon">🔎</div><h3>1. Service चुनें</h3><p>अपने event के लिए जरूरी service select करें।</p></div>
+<div class="step"><div class="icon">📝</div><h3>2. Request भेजें</h3><p>नाम, मोबाइल, date और event details भरें।</p></div>
+<div class="step"><div class="icon">🤝</div><h3>3. Rahul से बात</h3><p>All Samastipur team आपकी requirement समझेगी।</p></div>
+<div class="step"><div class="icon">🎉</div><h3>4. Event Ready</h3><p>Suitable local service partner arrange किया जाएगा।</p></div>
+</div></div></section>
+
+<section class="whysec"><div class="container"><div class="title"><small>WHY US</small><h2>All Samastipur क्यों?</h2><p>आपका event आसान बनाने के लिए बनाया गया platform.</p></div><div class="why">
+<div class="whycard"><div class="icon">⭐</div><h3>Trusted</h3><p>Local event service network.</p></div>
+<div class="whycard"><div class="icon">💰</div><h3>Budget Friendly</h3><p>आपके budget के अनुसार options.</p></div>
+<div class="whycard"><div class="icon">📱</div><h3>Easy Booking</h3><p>Mobile से booking request भेजें।</p></div>
+<div class="whycard"><div class="icon">🤝</div><h3>One Platform</h3><p>Multiple services, one platform.</p></div>
+</div></div></section>
+
+<section id="packages"><div class="container"><div class="title"><small>POPULAR PACKAGES</small><h2>Event Packages</h2><p>ये sample packages हैं। Final price service और requirement के अनुसार तय होगी।</p></div><div class="packages">
+<div class="package"><h3>Basic Event</h3><div class="price">₹25,000+</div><ul><li>✓ Basic Tent</li><li>✓ Basic Decoration</li><li>✓ Sound System</li><li>✓ Event Support</li></ul><a href="#booking" class="btn dark">Get Quote</a></div>
+<div class="package feature"><h3>Premium Wedding</h3><div class="price">₹75,000+</div><ul><li>✓ Premium Tent</li><li>✓ Premium Decoration</li><li>✓ Catering</li><li>✓ DJ & Sound</li><li>✓ Photography</li></ul><a href="#booking" class="btn gold">Book Package</a></div>
+<div class="package"><h3>Complete Wedding</h3><div class="price">Custom</div><ul><li>✓ Tent & Decoration</li><li>✓ Catering</li><li>✓ DJ & Sound</li><li>✓ Photography</li><li>✓ Hall & Transport</li></ul><a href="#booking" class="btn dark">Get Quote</a></div>
+</div></div></section>
+
+<section class="booking" id="booking"><div class="container"><div class="bookwrap"><div class="bookinfo"><small>ONLINE BOOKING</small><h2>अपना Event आज ही Book करें।</h2><p>आपकी booking request पहले All Samastipur team तक आएगी। इसके बाद requirement के अनुसार suitable service partner से coordination किया जाएगा।</p><ul><li>✓ Booking Request सीधे Rahul तक</li><li>✓ WhatsApp पर booking details</li><li>✓ UPI payment option</li><li>✓ Final service confirmation के बाद payment</li></ul><a href="https://wa.me/917494005371" target="_blank" class="btn gold">💬 Rahul से WhatsApp पर बात करें</a></div>
+<div class="formbox"><form id="bookingForm"><div class="formgrid">
+<div class="field"><label>पूरा नाम *</label><input id="name" required placeholder="आपका नाम"></div>
+<div class="field"><label>Mobile Number *</label><input id="phone" required type="tel" pattern="[0-9]{10}" maxlength="10" placeholder="10 digit mobile"></div>
+<div class="field"><label>Event Type *</label><select id="eventType" required><option value="">Select Event</option><option>Wedding</option><option>Reception</option><option>Engagement</option><option>Birthday</option><option>Mundan</option><option>Puja</option><option>Corporate Event</option><option>Other</option></select></div>
+<div class="field"><label>Service *</label><select id="service" required><option value="">Select Service</option><option>Tent House</option><option>Decoration</option><option>Catering</option><option>DJ & Sound</option><option>Photography</option><option>Wedding Hall</option><option>Makeup & Mehndi</option><option>Car & Transport</option><option>Complete Wedding</option></select></div>
+<div class="field"><label>Event Date *</label><input id="date" required type="date"></div>
+<div class="field"><label>Guests</label><input id="guests" type="number" placeholder="जैसे 300"></div>
+<div class="field"><label>Budget</label><select id="budget"><option value="">Select Budget</option><option>₹10,000 - ₹25,000</option><option>₹25,000 - ₹50,000</option><option>₹50,000 - ₹1,00,000</option><option>₹1,00,000+</option><option>Custom Budget</option></select></div>
+<div class="field"><label>Area / Location</label><input id="location" placeholder="Samastipur area"></div>
+<div class="field full"><label>Extra Requirement</label><textarea id="message" placeholder="अपने event की जरूरत लिखें..."></textarea></div>
+</div><button class="btn gold" type="submit" style="width:100%;margin-top:10px">📅 Submit Booking Request</button></form>
+<div class="payment"><h3>💳 Booking Payment</h3><p>Booking confirmation के बाद payment करें।</p><div class="upi">UPI ID: 7494005371@nyes</div><button class="pay" onclick="payNow()">💙 Pay Now with UPI</button></div>
+</div></div></div></section>
+
+<section><div class="container"><div class="title"><small>EVENT GALLERY</small><h2>आपके Special Moments</h2></div><div class="gallery">
+<div style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80')"></div>
+<div style="background-image:url('https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=900&q=80')"></div>
+<div style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80')"></div>
+<div style="background-image:url('https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=900&q=80')"></div>
+</div></div></section>
+
+<section id="reviews" style="background:#fff7f1"><div class="container"><div class="title"><small>CUSTOMER REVIEWS</small><h2>Customers की राय</h2></div><div class="reviews">
+<div class="review"><div class="stars">★★★★★</div><p>"Tent और decoration के लिए एक ही जगह request भेजना बहुत आसान रहा।"</p><strong>— Sample Review</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>"पूरे event की services एक platform पर मिलना काफी convenient है।"</p><strong>— Sample Review</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>"Booking process simple है और WhatsApp से बात करना भी आसान है।"</p><strong>— Sample Review</strong></div>
+</div></div></section>
+
+<section class="partner"><div class="container"><div class="partnerbox"><div style="font-size:50px">🤝</div><h2>क्या आप Event Service Provider हैं?</h2><p>Tent House, Caterer, Decorator, DJ, Photographer, Hall, Band, Makeup Artist या कोई अन्य event service देते हैं? All Samastipur के साथ partner बनें।</p><a href="https://wa.me/917494005371?text=Namaste%20Rahul%20ji%2C%20main%20All%20Samastipur%20ka%20service%20partner%20banana%20chahta%20hoon." target="_blank" class="btn gold">🤝 Partner Registration</a></div></div></section>
+
+<section><div class="container"><div class="title"><small>FAQ</small><h2>अक्सर पूछे जाने वाले सवाल</h2></div><div class="faq">
+<div class="faqitem"><button class="faqq" onclick="faq(this)">क्या All Samastipur पर multiple services book कर सकते हैं? +</button><div class="faqa">हाँ। Tent, decoration, catering, DJ, photography, hall और अन्य services के लिए request भेज सकते हैं।</div></div>
+<div class="faqitem"><button class="faqq" onclick="faq(this)">Booking किसके पास आएगी? +</button><div class="faqa">आपकी booking request पहले All Samastipur team और Owner Rahul तक आएगी।</div></div>
+<div class="faqitem"><button class="faqq" onclick="faq(this)">Payment कैसे होगा? +</button><div class="faqa">Payment के लिए UPI ID 7494005371@nyes उपलब्ध है। Final confirmation के बाद payment करें।</div></div>
+<div class="faqitem"><button class="faqq" onclick="faq(this)">क्या final price पहले से fixed है? +</button><div class="faqa">Final price service, date, guest count और requirement के अनुसार confirm किया जाएगा।</div></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="container"><div class="title"><small>CONTACT</small><h2>All Samastipur से जुड़ें</h2><p>Booking और enquiry के लिए Rahul से संपर्क करें।</p></div><div class="contactgrid">
+<div class="contactcard"><div class="icon">👨‍💼</div><h3>Owner</h3><p>Rahul</p></div>
+<div class="contactcard"><div class="icon">📞</div><h3>Call / WhatsApp</h3><p>7494005371</p></div>
+<div class="contactcard"><div class="icon">📍</div><h3>Location</h3><p>Samastipur, Bihar</p></div>
+</div><br><div style="text-align:center"><a href="tel:+917494005371" class="btn white">📞 Call Rahul</a> <a href="https://wa.me/917494005371" target="_blank" class="btn gold">💬 WhatsApp Rahul</a></div></div></section>
+
+<footer><h2>All Samastipur</h2><p>Every Event • Every Service • One Platform</p><p>Owner: Rahul | Samastipur, Bihar</p><p>© 2026 All Samastipur. All Rights Reserved.</p></footer>
+
+<div class="float"><a class="fbtn wa" href="https://wa.me/917494005371" target="_blank">💬</a><a class="fbtn call" href="tel:+917494005371">📞</a><button class="fbtn ai" onclick="toggleChat()">🤖</button></div>
+
+<div class="chat" id="chat"><div class="chathead">🤖 All Samastipur Assistant <span onclick="toggleChat()" style="float:right;cursor:pointer">×</span></div><div class="chatbody" id="chatBody"><div class="msg botmsg">नमस्ते! 👋 Booking, Services, Payment और Contact के बारे में पूछ सकते हैं।</div></div><div class="chatinput"><input id="chatInput" placeholder="अपना सवाल लिखें..."><button onclick="sendChat()">➤</button></div></div>
+
+<div class="modal" id="successModal"><div class="modalbox"><div class="success">🎉</div><h2>Booking Request Ready!</h2><p>आपकी booking details तैयार हैं। नीचे बटन दबाकर Rahul को WhatsApp पर भेजें।</p><a id="modalWhatsApp" class="btn gold" target="_blank">💬 WhatsApp पर भेजें</a><br><br><button class="btn dark" onclick="closeModal()">Close</button></div></div>
+
+<script>
+const PHONE="7494005371",WA="917494005371",UPI="7494005371@nyes";
+function toggleMenu(){document.getElementById("nav").classList.toggle("open")}
+document.getElementById("date").min=new Date().toISOString().split("T")[0];
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+e.preventDefault();
+const b={id:"AS"+Date.now().toString().slice(-8),name:name.value,phone:phone.value,event:eventType.value,service:service.value,date:date.value,guests:guests.value,budget:budget.value,location:location.value,message:message.value};
+let list=JSON.parse(localStorage.getItem("allSamastipurBookings")||"[]");list.unshift(b);localStorage.setItem("allSamastipurBookings",JSON.stringify(list));
+const text=`नमस्ते Rahul जी,\nमुझे All Samastipur पर booking करनी है।\n\nBooking ID: ${b.id}\nनाम: ${b.name}\nMobile: ${b.phone}\nEvent: ${b.event}\nService: ${b.service}\nDate: ${b.date}\nGuests: ${b.guests||"Not specified"}\nBudget: ${b.budget||"Not specified"}\nLocation: ${b.location||"Not specified"}\nRequirement: ${b.message||"No extra requirement"}`;
+document.getElementById("modalWhatsApp").href="https://wa.me/"+WA+"?text="+encodeURIComponent(text);
+document.getElementById("successModal").style.display="flex";
+});
+function closeModal(){document.getElementById("successModal").style.display="none"}
+function payNow(){location.href="upi://pay?pa="+encodeURIComponent(UPI)+"&pn="+encodeURIComponent("Rahul - All Samastipur")+"&cu=INR"}
+function faq(x){x.parentElement.classList.toggle("active")}
+function toggleChat(){const c=document.getElementById("chat");c.style.display=c.style.display==="block"?"none":"block"}
+function addMsg(t,bot){const d=document.createElement("div");d.className="msg"+(bot?" botmsg":"");d.textContent=t;chatBody.appendChild(d);chatBody.scrollTop=chatBody.scrollHeight}
+function sendChat(){let i=document.getElementById("chatInput"),q=i.value.trim();if(!q)return;addMsg(q,false);i.value="";q=q.toLowerCase();let a=q.includes("booking")||q.includes("बुक")?"Booking form भरें; details WhatsApp पर Rahul को भेज सकते हैं।":q.includes("service")||q.includes("सर्विस")?"Tent, Decoration, Catering, DJ, Photography, Hall, Makeup, Mehndi और Transport उपलब्ध services हैं।":q.includes("payment")||q.includes("upi")||q.includes("पेमेंट")?"UPI ID: 7494005371@nyes. Confirmation के बाद payment करें।":q.includes("contact")||q.includes("नंबर")?"Rahul से Call/WhatsApp: 7494005371 पर संपर्क करें।":"मैं Booking, Services, Payment और Contact की जानकारी दे सकता हूँ।";setTimeout(()=>addMsg(a,true),350)}
+document.getElementById("chatInput").addEventListener("keydown",e=>{if(e.key==="Enter")sendChat()});
+document.querySelectorAll("#nav a").forEach(a=>a.onclick=()=>document.getElementById("nav").classList.remove("open"));
+</script>
+</body>
+</html>
